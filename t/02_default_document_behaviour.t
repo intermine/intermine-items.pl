@@ -31,8 +31,8 @@ lives_ok(
 );
 my $exp = '<items>
    <item id="0_1" class="Employee" implements="">
-      <attribute name="name" value="Fred" />
       <attribute name="age" value="17" />
+      <attribute name="name" value="Fred" />
    </item>';
 is($output, $exp, 'Makes good xml');
 
@@ -45,8 +45,8 @@ $autowriter->add_item(
 
 $exp .= '
    <item id="0_2" class="Employee" implements="">
-      <attribute name="name" value="Ginger" />
       <attribute name="age" value="43" />
+      <attribute name="name" value="Ginger" />
    </item>';
 
 is($output, $exp, "Continues to make good xml");

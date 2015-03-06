@@ -466,7 +466,7 @@ sub as_xml
   $writer->startTag("item", id => $ID_PREFIX . $id,
                     class => $classname, implements => $implements);
 
-  for my $key (keys %$self) {
+  for my $key (sort keys %$self) {
     next if $key =~ /^:/;
     if ($key ne 'id' && $key ne 'class') {
       my $val = $self->{$key};

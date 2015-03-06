@@ -35,22 +35,22 @@ my @company_depts = @{$company->get("departments")};
 my $xml_exp = q[
 <items>
    <item id="0_1" class="Employee" implements="">
+      <attribute name="age" value="40" />
       <reference name="department" ref_id="0_3" />
       <attribute name="name" value="fred" />
-      <attribute name="age" value="40" />
    </item>
    <item id="0_2" class="Employee" implements="">
+      <attribute name="age" value="50" />
       <reference name="department" ref_id="0_3" />
       <attribute name="name" value="ginger" />
-      <attribute name="age" value="50" />
    </item>
    <item id="0_3" class="Department" implements="">
-       <collection name="employees">
+      <reference name="company" ref_id="0_4" />
+      <collection name="employees">
           <reference ref_id="0_1" />
           <reference ref_id="0_2" />
        </collection>
       <attribute name="name" value="big department" />
-      <reference name="company" ref_id="0_4" />
    </item>
    <item id="0_4" class="Company" implements="">
       <attribute name="name" value="big company" />
