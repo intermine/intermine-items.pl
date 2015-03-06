@@ -1,5 +1,7 @@
 package InterMine::Item::Document;
 
+our $VERSION = 0.991;
+
 =head1 NAME
 
 InterMine::Item::Document - a module for writing InterMine-Items-XML files 
